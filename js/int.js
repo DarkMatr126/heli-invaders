@@ -100,9 +100,11 @@ window.addEventListener('keydown',(e) => {
 
 var down = [];
 window.addEventListener('keydown',e => {
+	if (down.indexOf(e.key) > -1) return;
 	down.push(e.key);
 })
 window.addEventListener('keyup', e => {
+	if (down.indexOf(e.key) === -1) return;
 	down.splice(down.indexOf(e.key),1);
 })
 const isKeyDown = key => down.indexOf(key) > -1;

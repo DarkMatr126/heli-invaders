@@ -174,7 +174,7 @@ const player = {
 		}
 	},
 	firing: function() {
-		if (isKeyDown(32)) {
+		if (isKeyDown(' ')) {
 			if (this.ticksDown <= 0) {
 				missile.spawn(this.data.pos.x,this.data.pos.y + 50);
 				this.ticksDown = this.fireRate;
